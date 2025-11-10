@@ -1,0 +1,9 @@
+# Add project dependencies here. Example (edit as needed):
+# numpy
+# opencv-python
+# torch
+# torchvision
+# retinaface
+
+# To generate a requirements file from your current env run locally:
+# pip freeze > requirements.txt
