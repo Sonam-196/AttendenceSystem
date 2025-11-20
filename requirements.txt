@@ -1,9 +1,18 @@
-# Add project dependencies here. Example (edit as needed):
-# numpy
-# opencv-python
-# torch
-# torchvision
-# retinaface
+# Minimal dependencies for running the Streamlit app.
+# Note: some packages (torch, insightface) are large and may increase deployment time.
+streamlit
+numpy
+opencv-python-headless
+Pillow
 
-# To generate a requirements file from your current env run locally:
+# Optional / likely required for your code
+# insightface may require a specific torch version. If you have a working local env,
+# run `pip freeze` locally and paste the exact versions here to avoid build issues.
+insightface
+torch
+torchvision
+
+# If you want to keep binaries out of git, they are already in .gitignore.
+
+# To capture exact versions locally, run:
 # pip freeze > requirements.txt

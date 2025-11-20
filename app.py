@@ -453,10 +453,8 @@ if uploaded is not None:
             rows = out["rows"]
             # save csv (append)
             df = pd.DataFrame(rows)
-            if os.path.exists(ATTENDANCE_CSV):
-                df_existing = pd.read_csv(ATTENDANCE_CSV)
-                df = pd.concat([df_existing, df], ignore_index=True)
             df.to_csv(ATTENDANCE_CSV, index=False)
+
             # show annotated image
             st.image(cv2.cvtColor(annotated, cv2.COLOR_BGR2RGB), caption="Attendance Result", use_column_width=True)
             st.success(f"Attendance saved to {ATTENDANCE_CSV}")
